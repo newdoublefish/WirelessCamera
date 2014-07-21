@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nameShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设备名称:" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@+id/nameShow"
+        android:text="设备名称:" />
+
+    <TextView
+        android:id="@+id/ipShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameShow"
+        android:text="设备地址:" />
+
+    <TextView
+        android:id="@+id/ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ipShow"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@+id/ipShow"
+        android:text="设备地址:" />
+
+    <TextView
+        android:id="@+id/portShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ipShow"
+        android:text="设备端口:" />
+
+    <TextView
+        android:id="@+id/port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/portShow"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@+id/portShow"
+        android:text="设备端口:" />
+
+</RelativeLayout>

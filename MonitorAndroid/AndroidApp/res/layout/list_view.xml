@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginLeft="30dip"
+        android:background="@drawable/camera_single" />
+
+    <TextView
+        android:id="@+id/deviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dip"
+        android:layout_toRightOf="@+id/image"
+        android:text="客厅"
+        android:textSize="30dip" />
+"
+
+</RelativeLayout>

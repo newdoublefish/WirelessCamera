@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <SurfaceView
+            android:id="@+id/previewSV"
+            android:layout_width="fill_parent"
+            android:layout_height="600px" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+         <TextView
+            android:id="@+id/ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:textSize="20dip"
+            android:text="ip"/>
+        <EditText
+            android:id="@+id/ip_edit"
+            android:layout_width="400dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ip"
+            android:textSize="20dip"
+            android:text="192.168.1.120"
+            android:layout_marginLeft="30dip"/>
+        <TextView
+            android:id="@+id/duankou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ip_edit"
+            android:layout_marginLeft="30dip"
+            android:textSize="20dip"
+            android:text="端口"/>
+        <EditText
+            android:id="@+id/duankou_edit"
+            android:layout_width="400dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duankou"
+            android:textSize="20dip"
+            android:text="3333"
+            android:layout_marginLeft="30dip"/>     
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接"
+            android:textSize="20dip"
+            android:layout_marginLeft="30dip"
+            android:layout_toRightOf="@+id/duankou_edit"
+            />            
+    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/photoImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/photo_img_btn"
+        android:layout_gravity="center" />
+
+</LinearLayout>

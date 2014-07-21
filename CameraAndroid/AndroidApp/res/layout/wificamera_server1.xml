@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@color/yellow" >
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip" >  
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_single"
+            />    
+        <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="无线摄像头"
+            android:textColor="@color/white"
+            android:textSize="30dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/settingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/netSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dip"
+                android:text="设置:"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/netType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/netSetting"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip"
+                android:text="传输方式："
+                android:textSize="20dip" />
+
+            <CheckBox
+                android:id="@+id/tcp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/netType"
+                android:layout_toRightOf="@+id/netType"
+                android:text="Tcp:"
+                android:textSize="20dip" />
+
+            <CheckBox
+                android:id="@+id/ucp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/netType"
+                android:layout_toRightOf="@+id/tcp"
+                android:text="Ucp:"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/deviceNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/netType"
+                android:layout_below="@+id/ucp"
+                android:layout_marginTop="5dip"
+                android:text="设备名称:"
+                android:textSize="20dip" />
+
+            <EditText
+                android:id="@+id/deviceName"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/deviceNameTextView"
+                android:layout_toRightOf="@+id/deviceNameTextView"
+                android:text="wirelessCamera"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/scanPortTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/deviceNameTextView"
+                android:layout_below="@+id/deviceName"
+                android:layout_marginTop="5dip"
+                android:text="扫描端口:"
+                android:textSize="20dip" />
+
+            <EditText
+                android:id="@+id/scanPort"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/scanPortTextView"
+                android:layout_toRightOf="@+id/scanPortTextView"
+                android:text="8866"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/devicePortTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/deviceNameTextView"
+                android:layout_below="@+id/scanPort"
+                android:layout_marginTop="5dip"
+                android:text="传输端口:"
+                android:textSize="20dip" />
+
+            <EditText
+                android:id="@+id/devicePort"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/devicePortTextView"
+                android:layout_toRightOf="@+id/devicePortTextView"
+                android:text="8888"
+                android:textSize="20dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statusLayout"
+            android:layout_width="wrap_content"
+            android:layout_alignLeft="@+id/settingLayout"
+            android:layout_alignRight="@+id/settingLayout"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settingLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:layout_above="@+id/start"
+            android:background="@color/white" >
+            <TextView
+                android:id="@+id/netStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dip"
+                android:text="连接信息:"
+                android:textSize="20dip" />
+            <TextView
+                android:id="@+id/connectStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/netStatus"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip"
+                android:text="连接状态："
+                android:textSize="20dip" />
+            <TextView
+                android:id="@+id/status"
+                android:layout_toRightOf="@+id/connectStatusTextView"
+                android:layout_alignBottom="@+id/connectStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未连接"
+                android:textSize="20dip" />    
+            <TextView
+                android:id="@+id/localIpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/connectStatusTextView"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip"
+                android:text="本地地址："
+                android:textSize="20dip" />                        
+            <TextView
+                android:id="@+id/localip"
+                android:layout_toRightOf="@+id/localIpTextView"
+                android:layout_alignBottom="@+id/localIpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无"
+                android:textSize="20dip" />
+            <TextView
+                android:id="@+id/IpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/localIpTextView"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip"
+                android:text="連接地址："
+                android:textSize="20dip" />                
+
+            <TextView
+                android:id="@+id/ip"
+                android:layout_toRightOf="@+id/IpTextView"
+                android:layout_alignBottom="@+id/IpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无"
+                android:textSize="20dip" />
+            
+            <TextView
+                android:id="@+id/receiveCmdTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/IpTextView"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip"
+                android:text="接受命令："
+                android:textSize="20dip" />             
+
+            <TextView
+                android:id="@+id/receiveCmd"
+                android:layout_toRightOf="@+id/receiveCmdTextView"
+                android:layout_alignBottom="@+id/receiveCmdTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无"
+                android:textSize="20dip" />
+            <TextView
+                android:id="@+id/infoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/receiveCmdTextView"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="5dip"
+                android:text="設備信息："
+                android:textSize="20dip" />   
+            <TextView
+                android:id="@+id/info"
+                android:layout_toRightOf="@+id/infoTextView"
+                android:layout_alignBottom="@+id/infoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="10"
+                android:visibility="invisible"
+                android:text="无"
+                android:textSize="20dip" />            
+        </RelativeLayout>
+
+        
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="启动"
+                android:textSize="20dip" />
+
+       
+    </RelativeLayout>
+
+</LinearLayout>
